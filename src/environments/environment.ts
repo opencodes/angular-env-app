@@ -1,6 +1,20 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+declare var process: Process;
+
+interface Process {
+  env: Env
+}
+
+interface Env {
+  NG_APP_VERSION: any;
+  KEY_TO_READ: string
+}
+
+const KEY = `${process.env.NG_APP_VERSION}`;
+console.log(KEY);
+
 
 export const environment = {
   production: false

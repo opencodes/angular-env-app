@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  branch = process.env['NG_APP_BRANCH_NAME'];
 }
